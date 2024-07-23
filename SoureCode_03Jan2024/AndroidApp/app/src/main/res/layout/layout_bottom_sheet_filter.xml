@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/transparent_5sdp_radius"
+   >
+    <LinearLayout
+        android:layout_width="@dimen/_75sdp"
+        android:layout_height="@dimen/_3sdp"
+        android:background="@drawable/simple_edittext_white100"
+        android:layout_gravity="center"
+        android:layout_marginVertical="@dimen/_5sdp"/>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bottom_sheet_bg"
+    android:orientation="vertical"
+    android:paddingHorizontal="@dimen/_10sdp"
+    android:paddingVertical="@dimen/_2sdp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/kumbh_sans_bold"
+            android:gravity="start"
+            android:paddingVertical="@dimen/_10sdp"
+            android:text="@string/view_by_employee"
+            android:textColor="@color/Primary100"
+            android:textSize="@dimen/_12sdp" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/tv_clear_all"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/kumbh_sans_regular"
+            android:gravity="start"
+            android:paddingVertical="@dimen/_10sdp"
+            android:text="@string/clear_all"
+            android:textColor="@color/Grey40" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_select_emp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/txt_field_sign_screen"
+        android:orientation="horizontal"
+        android:paddingHorizontal="@dimen/_10sdp"
+        android:paddingVertical="@dimen/_5sdp">
+
+        <ImageView
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_marginEnd="@dimen/_5sdp"
+            android:padding="@dimen/_10sdp"
+            android:src="@drawable/user_icon" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:fontFamily="@font/kumbh_sans_regular"
+            android:gravity="center_vertical"
+            android:text="@string/select_employee"
+            android:textColor="@color/Grey60"
+            android:textSize="@dimen/_14sdp" />
+
+        <ImageView
+            android:id="@+id/iv_employee_dropdown"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:padding="@dimen/_10sdp"
+            android:src="@drawable/arrow_up" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_employee_filter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_7sdp"
+        android:background="@drawable/txt_field_sign_screen"
+        android:orientation="vertical"
+        android:paddingHorizontal="@dimen/_10sdp"
+        android:paddingVertical="@dimen/_5sdp"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/kumbh_sans_regular"
+                android:gravity="start"
+                android:paddingVertical="@dimen/_10sdp"
+                android:text="@string/employee_attendance_list"
+                android:textColor="@color/Primary100" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+
+            <CheckBox
+                android:id="@+id/ck_is_all"
+                android:layout_width="@dimen/_15sdp"
+                android:layout_height="@dimen/_15sdp"
+                android:layout_marginHorizontal="@dimen/_13sdp"
+                app:buttonTint="@color/Primary100" />
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_filter_employee_list"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_200sdp"
+            android:layout_marginVertical="@dimen/_5sdp"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/kumbh_sans_bold"
+            android:gravity="start"
+            android:paddingVertical="@dimen/_10sdp"
+            android:text="@string/view_by_date"
+            android:textColor="@color/Primary100"
+            android:textSize="@dimen/_12sdp" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_select_date"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/txt_field_sign_screen"
+        android:orientation="horizontal"
+        android:paddingHorizontal="@dimen/_10sdp"
+        android:paddingVertical="@dimen/_5sdp"
+        >
+
+        <ImageView
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_marginEnd="@dimen/_5sdp"
+            android:padding="@dimen/_10sdp"
+            android:src="@drawable/calendar_icon" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:fontFamily="@font/kumbh_sans_regular"
+            android:gravity="center_vertical"
+            android:text="@string/select_from_date_to_date"
+            android:textColor="@color/Grey60"
+            android:textSize="@dimen/_14sdp" />
+
+        <ImageView
+            android:id="@+id/iv_date_dropdown"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:padding="@dimen/_10sdp"
+            android:src="@drawable/arrow_up" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_date_filter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_7sdp"
+        android:background="@drawable/txt_field_sign_screen"
+        android:orientation="vertical"
+        android:paddingHorizontal="@dimen/_10sdp"
+        android:paddingVertical="@dimen/_5sdp"
+        android:visibility="gone">
+
+        <com.archit.calendardaterangepicker.customviews.DateRangeCalendarView
+            android:id="@+id/calendar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            custom:disable_date_color="#ABABAB"
+            custom:selected_date_circle_color="@color/Primary100"
+            custom:range_color="@color/Primary200"
+            custom:date_selection_mode="free_range"
+            custom:editable="true"
+            custom:enable_time_selection="false"
+            custom:week_color="@color/Grey40"
+            custom:title_color="@color/Grey100"
+            />
+
+
+
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_10sdp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/_14sdp"
+        android:id="@+id/tv_apply_filter"
+        android:fontFamily="@font/kumbh_sans_regular"
+        android:textColor="@color/White20"
+        android:text="@string/apply_filter"
+        android:layout_marginVertical="@dimen/_5sdp"
+        android:paddingHorizontal="@dimen/_10sdp"
+        android:paddingVertical="@dimen/_12sdp"
+        android:gravity="center"
+        android:background="@drawable/btn_forget_password"
+        />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_10sdp"/>
+</LinearLayout>
+</LinearLayout>

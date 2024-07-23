@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/tv_missing_item"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="@string/please_add_the_required_information_to_the_profile"
+    android:fontFamily="@font/kumbh_sans_bold"
+    android:textColor="@color/black"
+    android:textSize="@dimen/_14sdp"
+    android:layout_marginVertical="@dimen/_10sdp">
+
+</TextView>

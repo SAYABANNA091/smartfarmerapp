@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="?attr/actionBarSize"
+    android:orientation="horizontal"
+    android:paddingHorizontal="@dimen/_5sdp">
+
+    <ImageView
+        android:id="@+id/iv_back"
+        android:layout_width="@dimen/_30sdp"
+        android:padding="@dimen/_3sdp"
+        android:layout_height="match_parent"
+        android:src="@drawable/arrow_left" />
+
+    <ImageView
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:padding="@dimen/_7sdp"
+        android:src="@drawable/app_logo" />
+
+    <ImageView
+        android:id="@+id/iv_right"
+        android:layout_width="@dimen/_30sdp"
+        android:layout_height="match_parent"
+        android:src="@drawable/add_square"
+        android:padding="@dimen/_2sdp"
+        android:visibility="invisible"/>
+
+
+</LinearLayout>

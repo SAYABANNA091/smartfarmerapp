@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.MarketDetailsActivity">
+    <include layout="@layout/actionbar_layout_with_title"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <com.facebook.shimmer.ShimmerFrameLayout
+            android:id="@+id/sf_base_shimmer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginVertical="@dimen/_6sdp"
+                android:background="@drawable/btn_bg_greay100"
+                android:padding="@dimen/_10sdp"
+                android:orientation="vertical"
+                android:layout_marginHorizontal="@dimen/_10sdp"
+                android:paddingVertical="@dimen/_5sdp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:fontFamily="@font/kumbh_sans_bold"
+                    android:gravity="start"
+                    android:textSize="@dimen/_14sdp"
+                    android:textColor="@color/Grey100" />
+                <LinearLayout
+                    android:layout_marginVertical="@dimen/_5sdp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/kumbh_sans_medium"
+                        android:gravity="start"
+                        android:textColor="@color/Grey60" />
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:fontFamily="@font/kumbh_sans_bold"
+                        android:gravity="start"
+                        android:textSize="@dimen/_14sdp"
+                        android:textColor="@color/Grey100" />
+
+
+
+                </LinearLayout>
+                <LinearLayout
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <LinearLayout
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/kumbh_sans_medium"
+                            android:gravity="start"
+                            android:textSize="@dimen/_12sdp"
+                            android:textColor="@color/Primary100" />
+                        <View
+                            android:layout_width="@dimen/_2sdp"
+                            android:layout_height="0dp"/>
+                    </LinearLayout>
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:paddingHorizontal="@dimen/_5sdp"
+                        android:paddingVertical="@dimen/_2sdp"
+                        android:orientation="horizontal"
+                        >
+
+                        <View
+                            android:layout_width="@dimen/_2sdp"
+                            android:layout_height="0dp"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:fontFamily="@font/kumbh_sans_medium"
+                            android:gravity="start"
+                            android:textColor="@color/White100" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </com.facebook.shimmer.ShimmerFrameLayout>
+        <LinearLayout
+            android:id="@+id/ll_base_data"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginVertical="@dimen/_6sdp"
+            android:background="@drawable/home_item_back"
+            android:padding="@dimen/_10sdp"
+            android:orientation="vertical"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            android:paddingVertical="@dimen/_5sdp">
+
+            <TextView
+                android:id="@+id/tv_commodity_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:fontFamily="@font/kumbh_sans_bold"
+                android:gravity="start"
+                android:text="Wheat"
+                android:textSize="@dimen/_14sdp"
+                android:textColor="@color/Grey100" />
+            <LinearLayout
+                android:layout_marginVertical="@dimen/_5sdp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_commodity_market"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/kumbh_sans_medium"
+                    android:gravity="start"
+                    android:text="Aurangabad"
+                    android:textColor="@color/Grey60" />
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"/>
+                <TextView
+                    android:id="@+id/tv_commodity_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:fontFamily="@font/kumbh_sans_bold"
+                    android:gravity="start"
+                    android:text="₹ 1150/Q"
+                    android:textSize="@dimen/_14sdp"
+                    android:textColor="@color/Grey100" />
+
+
+
+            </LinearLayout>
+            <LinearLayout
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:id="@+id/tv_last_update"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/kumbh_sans_medium"
+                        android:gravity="start"
+                        android:text="08 May 2023"
+                        android:textSize="@dimen/_12sdp"
+                        android:textColor="@color/Primary100" />
+                    <View
+                        android:layout_width="@dimen/_2sdp"
+                        android:layout_height="0dp"/>
+                    <ImageView
+                        android:id="@+id/iv_trend_icon"
+                        android:layout_width="@dimen/_10sdp"
+                        android:layout_height="@dimen/_10sdp"
+                        android:src="@drawable/market_up"/>
+                </LinearLayout>
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"/>
+                <LinearLayout
+                    android:id="@+id/ll_price_difference"
+                    android:background="@drawable/green_btn_rounded"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:paddingHorizontal="@dimen/_5sdp"
+                    android:paddingVertical="@dimen/_2sdp"
+                    android:orientation="horizontal"
+                    >
+
+                    <ImageView
+                        android:id="@+id/iv_price_difference_icon"
+                        android:layout_width="@dimen/_10sdp"
+                        android:layout_height="@dimen/_10sdp"
+                        android:src="@drawable/arrow_up_white"/>
+                    <View
+                        android:layout_width="@dimen/_2sdp"
+                        android:layout_height="0dp"/>
+                    <TextView
+                        android:id="@+id/tv_price_difference"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:fontFamily="@font/kumbh_sans_medium"
+                        android:gravity="start"
+                        android:text="₹700"
+                        android:textColor="@color/White100" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </RelativeLayout>
+
+
+    <!--Chat-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:id="@+id/sf_chat_shimmer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/home_item_back_shimmer"/>
+    </com.facebook.shimmer.ShimmerFrameLayout>
+    <com.github.mikephil.charting.charts.LineChart
+        android:id="@+id/chart1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginHorizontal="@dimen/_10sdp"/>
+    </RelativeLayout>
+    <!--Past Prices-->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/past_prices"
+        android:textColor="@color/Grey100"
+        android:textSize="@dimen/_14sdp"
+        android:layout_marginStart="@dimen/_11sdp"
+        android:layout_marginTop="@dimen/_7sdp"
+        app:fontFamily="@font/kumbh_sans_bold" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_7sdp" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_marginHorizontal="@dimen/_10sdp">
+            <com.facebook.shimmer.ShimmerFrameLayout
+                android:id="@+id/sf_shimmer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone">
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_market_Shimmer"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+
+                    />
+            </com.facebook.shimmer.ShimmerFrameLayout>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_market"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                />
+        </RelativeLayout>
+</LinearLayout>

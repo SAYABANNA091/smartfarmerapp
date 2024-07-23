@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.MarketActivity"
+    android:orientation="vertical">
+
+    <include layout="@layout/actionbar_layout_with_title"/>
+    <!--Search-->
+    <LinearLayout
+        android:id="@+id/ll_search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_10sdp"
+        android:background="@drawable/txt_field_sign_screen"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingHorizontal="@dimen/_5sdp"
+        android:paddingVertical="@dimen/_5sdp">
+
+        <ImageView
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="@dimen/_5sdp"
+            android:padding="@dimen/_3sdp"
+            android:src="@drawable/search_icon" />
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+            <EditText
+                android:id="@+id/et_search"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/transparent"
+                android:fontFamily="@font/kumbh_sans_regular"
+                android:hint="@string/search"
+                android:imeOptions="actionSearch"
+                android:inputType="textPersonName"
+                android:maxLines="1"
+                android:textColorHint="@color/Grey60"
+                android:textSize="@dimen/_12sdp" />
+
+        </LinearLayout>
+
+
+
+        <ImageView
+            android:id="@+id/iv_clear_search"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_marginEnd="@dimen/_5sdp"
+            android:padding="@dimen/_2sdp"
+            android:src="@drawable/remove_image_icon"
+            app:tint="@color/Primary100" />
+
+    </LinearLayout>
+    <!--DropDowns-->
+    <LinearLayout
+        android:id="@+id/ll_drop_downs"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_45sdp"
+        android:layout_marginHorizontal="@dimen/_10sdp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:paddingVertical="@dimen/_5sdp">
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            android:gravity="center_vertical"
+            android:background="@drawable/txt_field_sign_screen">
+        <LinearLayout
+            android:id="@+id/ll_sp_state"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_45sdp"
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            android:gravity="center_vertical"
+            android:background="@drawable/txt_field_sign_screen"
+           >
+            <TextView
+                android:id="@+id/tv_state"
+                android:singleLine="true"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:ellipsize="end"
+                android:text="@string/state"
+                android:paddingStart="@dimen/_5sdp"
+                android:paddingEnd="@dimen/_2sdp"
+                android:gravity="center_vertical"
+                app:fontFamily="@font/kumbh_sans_regular"
+                android:textColor="@color/Grey100"/>
+            <ImageView
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_marginEnd="@dimen/_5sdp"
+                android:padding="@dimen/_2sdp"
+                android:src="@drawable/arrow_down"
+                 />
+        </LinearLayout>
+            <Spinner
+                android:id="@+id/sp_loc"
+                android:layout_below="@+id/ll_sp_state"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:dropDownWidth="wrap_content"
+                android:dropDownHeight="@dimen/_250sdp" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            android:gravity="center_vertical"
+            android:layout_marginHorizontal="@dimen/_5sdp"
+            android:background="@drawable/txt_field_sign_screen">
+        <LinearLayout
+            android:id="@+id/ll_sp_market"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_45sdp"
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            android:gravity="center_vertical"
+
+            android:background="@drawable/txt_field_sign_screen"
+            >
+            <TextView
+                android:id="@+id/tv_market"
+                android:singleLine="true"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:ellipsize="end"
+                android:text="@string/market"
+                android:paddingStart="@dimen/_5sdp"
+                android:paddingEnd="@dimen/_2sdp"
+                android:gravity="center_vertical"
+                app:fontFamily="@font/kumbh_sans_regular"
+                android:textColor="@color/Grey100"/>
+            <ImageView
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_marginEnd="@dimen/_5sdp"
+                android:padding="@dimen/_2sdp"
+                android:src="@drawable/arrow_down"
+                />
+        </LinearLayout>
+            <Spinner
+                android:id="@+id/sp_market"
+                android:layout_below="@+id/ll_sp_market"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:dropDownWidth="wrap_content"
+                android:dropDownHeight="@dimen/_250sdp" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            android:gravity="center_vertical"
+            android:background="@drawable/txt_field_sign_screen">
+        <LinearLayout
+            android:id="@+id/ll_sp_commodity"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_45sdp"
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            android:gravity="center_vertical"
+            android:background="@drawable/txt_field_sign_screen"
+            >
+            <TextView
+                android:id="@+id/tv_commodity"
+                android:singleLine="true"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:ellipsize="end"
+                android:text="@string/commodity"
+                android:paddingStart="@dimen/_5sdp"
+                android:paddingEnd="@dimen/_2sdp"
+                android:gravity="center_vertical"
+                app:fontFamily="@font/kumbh_sans_regular"
+                android:textColor="@color/Grey100"/>
+            <ImageView
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_marginEnd="@dimen/_5sdp"
+                android:padding="@dimen/_2sdp"
+                android:src="@drawable/arrow_down"
+                />
+        </LinearLayout>
+            <Spinner
+                android:id="@+id/sp_commodity"
+                android:layout_below="@+id/ll_sp_commodity"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:dropDownWidth="wrap_content"
+                android:dropDownHeight="@dimen/_250sdp" />
+        </RelativeLayout>
+        </LinearLayout>
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/swipe_refresh"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginHorizontal="@dimen/_10sdp">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginHorizontal="@dimen/_3sdp"
+                android:layout_weight="1">
+                <com.facebook.shimmer.ShimmerFrameLayout
+                    android:id="@+id/sf_shimmer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone">
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rv_market_Shimmer"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+
+                        />
+                </com.facebook.shimmer.ShimmerFrameLayout>
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_market"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    />
+                <LinearLayout
+                    android:id="@+id/ll_empty_search"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="0.5" />
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_minus25sdp"
+                        android:fontFamily="@font/kumbh_sans_regular"
+                        android:gravity="center"
+                        android:text="@string/no_data_found"
+                        android:textColor="@color/Grey60"
+                        android:textSize="@dimen/_12sdp" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="0.5" />
+                </LinearLayout>
+
+            </RelativeLayout>
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+
+
+    </LinearLayout>
+
+<!--</LinearLayout>-->

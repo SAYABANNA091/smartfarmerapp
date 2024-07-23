@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "437930499005",
+    "project_id": "soni-live-6a320",
+    "storage_bucket": "soni-live-6a320.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:437930499005:android:3d64b2d3f90ad2f6d590d4",
+        "android_client_info": {
+          "package_name": "com.soniapp.pro"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "437930499005-q5jud180tubuk550n5dpknagv45tuuo7.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.soniapp.pro",
+            "certificate_hash": "78ce2961f4ac5a73c93cade5dbd88f7a90bc3fe2"
+          }
+        },
+        {
+          "client_id": "437930499005-g6scgemiiu88eht3kmhapaklhnaksv4j.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAHI2mvkIQI0LLv2TW9pbsvLLXui5SWC3g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "437930499005-g6scgemiiu88eht3kmhapaklhnaksv4j.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

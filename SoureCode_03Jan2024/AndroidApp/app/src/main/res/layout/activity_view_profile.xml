@@ -1,0 +1,592 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.ViewProfileActivity">
+
+
+    <include layout="@layout/actionbar_layout_with_title"/>
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_150sdp">
+        <RelativeLayout
+            android:layout_marginVertical="@dimen/_5sdp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <View
+                android:layout_width="@dimen/_130sdp"
+                android:layout_height="@dimen/_130sdp"
+                android:background="@drawable/dotted_circle"
+                android:layout_centerInParent="true"/>
+            <androidx.cardview.widget.CardView
+                android:layout_width="@dimen/_120sdp"
+                android:layout_height="@dimen/_120sdp"
+                app:cardCornerRadius="@dimen/_120sdp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/default_profile" >
+
+                <ImageView
+                    android:id="@+id/iv_user_image"
+                    android:layout_width="@dimen/_120sdp"
+                    android:layout_height="@dimen/_120sdp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/default_profile" />
+            </androidx.cardview.widget.CardView>
+
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/iv_choose_image"
+            android:layout_width="@dimen/_45sdp"
+            android:layout_height="@dimen/_45sdp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:background="@drawable/circle_outline"
+            android:clipToOutline="true"
+            android:src="@drawable/camera_icon" />
+    </RelativeLayout>
+
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/_10sdp" />
+
+    <TextView
+        android:id="@+id/tv_user_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/kumbh_sans_bold"
+        android:gravity="center"
+        android:text="John Richardson"
+        android:textColor="@color/Grey100"
+        android:layout_marginHorizontal="@dimen/_10sdp"
+        android:textSize="@dimen/_18sdp" />
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/_5sdp" />
+
+    <TextView
+        android:id="@+id/tv_user_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/kumbh_sans_regular"
+        android:gravity="center"
+        android:text="John Richardson@yopmail.com"
+        android:layout_marginHorizontal="@dimen/_10sdp"
+        android:textColor="@color/Grey60"
+        android:textSize="@dimen/_12sdp" />
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/_10sdp"/>
+
+    <LinearLayout
+        android:id="@+id/ll_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_10sdp"
+        android:background="@drawable/txt_field_sign_screen"
+        android:orientation="horizontal"
+        android:paddingHorizontal="@dimen/_10sdp"
+        android:paddingVertical="@dimen/_5sdp">
+
+        <ImageView
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_marginEnd="@dimen/_5sdp"
+            android:padding="@dimen/_12sdp"
+            android:src="@drawable/user_icon" />
+
+        <EditText
+            android:id="@+id/et_user_name"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/transparent"
+            android:fontFamily="@font/kumbh_sans_regular"
+            android:text="John Richardson"
+            android:hint="@string/first_name"
+            android:textColor="@color/Primary100"
+            android:textColorHint="@color/Primary100"
+            android:inputType="textPersonName"
+            android:imeOptions="actionNext"
+            android:maxLines="1"
+            android:maxLength="20"
+            android:textSize="@dimen/_14sdp" />
+
+    </LinearLayout>
+
+
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/_10sdp"/> <LinearLayout
+        android:id="@+id/ll_last_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_10sdp"
+        android:background="@drawable/txt_field_sign_screen"
+        android:orientation="horizontal"
+        android:paddingHorizontal="@dimen/_10sdp"
+        android:paddingVertical="@dimen/_5sdp">
+
+        <ImageView
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_marginEnd="@dimen/_5sdp"
+            android:padding="@dimen/_12sdp"
+            android:src="@drawable/user_icon" />
+
+        <EditText
+            android:id="@+id/et_last_name"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/transparent"
+            android:fontFamily="@font/kumbh_sans_regular"
+            android:text="Richardson"
+            android:hint="@string/last_name"
+            android:textColor="@color/Primary100"
+            android:textColorHint="@color/Primary100"
+            android:inputType="textPersonName"
+            android:imeOptions="actionNext"
+            android:maxLines="1"
+            android:maxLength="20"
+            android:textSize="@dimen/_14sdp" />
+
+    </LinearLayout>
+
+
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/_10sdp"/>
+
+    <LinearLayout
+        android:id="@+id/ll_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginHorizontal="@dimen/_10sdp"
+        android:paddingHorizontal="@dimen/_10sdp"
+        android:paddingVertical="@dimen/_5sdp"
+        android:background="@drawable/txt_field_sign_screen">
+        <ImageView
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:padding="@dimen/_12sdp"
+            android:src="@drawable/email_icon"
+            android:layout_marginEnd="@dimen/_5sdp"/>
+
+        <EditText
+            android:id="@+id/et_email_id"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/transparent"
+            android:fontFamily="@font/kumbh_sans_regular"
+            android:text="johnrichardson@yopmail.com"
+            android:textColor="@color/Primary100"
+            android:textColorHint="@color/Primary100"
+            android:inputType="textEmailAddress"
+            android:maxLines="1"
+            android:textSize="@dimen/_14sdp" />
+
+    </LinearLayout>
+
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/_10sdp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginHorizontal="@dimen/_10sdp"
+        android:paddingHorizontal="@dimen/_10sdp"
+        android:paddingVertical="@dimen/_5sdp"
+        android:background="@drawable/txt_field_sign_screen">
+        <ImageView
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:padding="@dimen/_12sdp"
+            android:src="@drawable/call_icon"
+            android:layout_marginEnd="@dimen/_5sdp"/>
+
+        <EditText
+            android:id="@+id/et_phone"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/transparent"
+            android:enabled="false"
+            android:fontFamily="@font/kumbh_sans_regular"
+            android:text="1234567890"
+            android:textColor="@color/Grey60"
+            android:textColorHint="@color/Grey60"
+            android:textSize="@dimen/_14sdp" />
+
+    </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_20sdp" />
+    <LinearLayout
+        android:id="@+id/ll_state"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_10sdp"
+        android:background="@drawable/txt_field_sign_screen"
+        android:orientation="vertical"
+
+        android:paddingVertical="@dimen/_5sdp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginEnd="@dimen/_5sdp"
+                android:padding="@dimen/_10sdp"
+                android:src="@drawable/state_icon" />
+
+            <TextView
+                android:id="@+id/et_state"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/transparent"
+                android:fontFamily="@font/kumbh_sans_regular"
+                android:gravity="center_vertical"
+                android:hint="@string/state"
+                android:maxLines="1"
+                android:textColorHint="@color/Grey60"
+                android:textSize="@dimen/_14sdp" />
+
+            <ImageView
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="@dimen/_5sdp"
+                android:padding="@dimen/_2sdp"
+                android:src="@drawable/arrow_down" />
+        </LinearLayout>
+
+        <Spinner
+            android:id="@+id/sp_state"
+            android:layout_width="@dimen/_275sdp"
+            android:layout_height="0dp"
+            android:dropDownWidth="@dimen/_275sdp"
+            android:dropDownHeight="@dimen/_275sdp"
+            android:background="@color/transparent"/>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_20sdp" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/ll_district"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            android:background="@drawable/txt_field_sign_screen"
+            android:orientation="vertical"
+            android:paddingVertical="@dimen/_5sdp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="@dimen/_40sdp"
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    android:padding="@dimen/_10sdp"
+                    android:src="@drawable/buliding" />
+
+                <TextView
+                    android:id="@+id/et_disrict"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/transparent"
+                    android:fontFamily="@font/kumbh_sans_regular"
+                    android:gravity="center_vertical"
+                    android:hint="@string/district"
+                    android:maxLines="1"
+                    android:textColorHint="@color/Grey60"
+                    android:textSize="@dimen/_14sdp" />
+
+                <ImageView
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    android:padding="@dimen/_2sdp"
+                    android:src="@drawable/arrow_down" />
+            </LinearLayout>
+
+            <Spinner
+                android:id="@+id/sp_district"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:dropDownWidth="match_parent"
+                android:dropDownHeight="@dimen/_250sdp"
+                android:background="@color/transparent"/>
+        </LinearLayout>
+
+        <com.facebook.shimmer.ShimmerFrameLayout
+            android:id="@+id/district_shimmer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_10sdp"
+
+                android:paddingVertical="@dimen/_5sdp"
+                android:background="@drawable/home_item_back_shimmer"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="@dimen/_40sdp"
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    android:padding="@dimen/_10sdp"
+                    />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/transparent"
+                    android:fontFamily="@font/kumbh_sans_regular"
+                    android:gravity="center_vertical"
+                    android:hint="@string/taluka"
+                    android:maxLines="1"
+                    android:textColorHint="@color/Grey60"
+                    android:textSize="@dimen/_14sdp" />
+
+                <ImageView
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    android:padding="@dimen/_2sdp"
+                    />
+            </LinearLayout>
+
+        </com.facebook.shimmer.ShimmerFrameLayout>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_20sdp" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/ll_taluka"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            android:background="@drawable/txt_field_sign_screen"
+            android:orientation="vertical"
+            android:paddingVertical="@dimen/_5sdp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="@dimen/_40sdp"
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    android:padding="@dimen/_10sdp"
+                    android:src="@drawable/taluka_icon" />
+
+                <TextView
+                    android:id="@+id/et_taluka"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/transparent"
+                    android:fontFamily="@font/kumbh_sans_regular"
+                    android:gravity="center_vertical"
+                    android:hint="@string/taluka"
+                    android:maxLines="1"
+                    android:textColorHint="@color/Grey60"
+                    android:textSize="@dimen/_14sdp" />
+
+                <ImageView
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    android:padding="@dimen/_2sdp"
+                    android:src="@drawable/arrow_down" />
+            </LinearLayout>
+
+            <Spinner
+                android:id="@+id/sp_taluka"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:dropDownWidth="match_parent"
+                android:dropDownHeight="@dimen/_250sdp"
+                android:background="@color/transparent"/>
+        </LinearLayout>
+
+        <com.facebook.shimmer.ShimmerFrameLayout
+            android:id="@+id/taluka_shimmer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:visibility="gone">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_10sdp"
+                android:paddingHorizontal="@dimen/_10sdp"
+                android:paddingVertical="@dimen/_5sdp"
+                android:background="@drawable/home_item_back_shimmer"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="@dimen/_40sdp"
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    android:padding="@dimen/_10sdp"
+                    />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/transparent"
+                    android:fontFamily="@font/kumbh_sans_regular"
+                    android:gravity="center_vertical"
+                    android:hint="@string/taluka"
+                    android:maxLines="1"
+                    android:textColorHint="@color/Grey60"
+                    android:textSize="@dimen/_14sdp" />
+
+                <ImageView
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    android:padding="@dimen/_2sdp"
+                    />
+            </LinearLayout>
+
+
+        </com.facebook.shimmer.ShimmerFrameLayout>
+    </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_20sdp" />
+
+        <LinearLayout
+            android:id="@+id/ll_pincode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            android:background="@drawable/txt_field_sign_screen"
+            android:orientation="horizontal"
+            android:paddingHorizontal="@dimen/_10sdp"
+            android:paddingVertical="@dimen/_5sdp">
+
+            <ImageView
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginEnd="@dimen/_5sdp"
+                android:padding="@dimen/_10sdp"
+                android:src="@drawable/pincode_icon" />
+
+            <EditText
+                android:id="@+id/et_pincode"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/transparent"
+                android:fontFamily="@font/kumbh_sans_regular"
+                android:hint="@string/pincode"
+                android:imeOptions="actionDone"
+                android:inputType="number"
+                android:maxLength="6"
+                android:maxLines="1"
+                android:textColorHint="@color/Grey60"
+                android:textSize="@dimen/_14sdp" />
+
+        </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_20sdp" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:id="@+id/txt_shimmer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/_14sdp"
+            android:fontFamily="@font/kumbh_sans_regular"
+            android:textColor="@color/White20"
+
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            android:layout_marginVertical="@dimen/_5sdp"
+            android:paddingHorizontal="@dimen/_10sdp"
+            android:paddingVertical="@dimen/_12sdp"
+            android:gravity="center"
+            android:background="@drawable/btn_forget_password"
+            />
+    </com.facebook.shimmer.ShimmerFrameLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/_14sdp"
+        android:id="@+id/txt_add_btn"
+        android:fontFamily="@font/kumbh_sans_regular"
+        android:textColor="@color/White20"
+        android:text="@string/update"
+        android:layout_marginHorizontal="@dimen/_10sdp"
+        android:layout_marginVertical="@dimen/_5sdp"
+        android:paddingHorizontal="@dimen/_10sdp"
+        android:paddingVertical="@dimen/_12sdp"
+        android:gravity="center"
+        android:background="@drawable/btn_forget_password"
+        />
+    </RelativeLayout>
+    </LinearLayout>
+</ScrollView>
+</LinearLayout>

@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".activity.LanguageSelectActivity">
+
+
+    <include layout="@layout/actionbar_layout_with_icon" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_10sdp" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_10sdp"
+        android:fontFamily="@font/kumbh_sans_bold"
+        android:text="@string/select_language"
+        android:textColor="@color/Grey100"
+        android:textSize="@dimen/_20sdp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_10sdp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_10sdp"
+        android:fontFamily="@font/kumbh_sans_medium"
+        android:text="@string/please_select_any_one_language_given_below"
+        android:textColor="@color/Grey80"
+        android:textSize="@dimen/_12sdp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_20sdp"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/ll_english"
+        android:layout_marginHorizontal="@dimen/_10sdp"
+        android:paddingHorizontal="@dimen/_10sdp"
+        android:paddingVertical="@dimen/_5sdp"
+        android:background="@drawable/txt_field_sign_screen">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:background="@color/transparent"
+            android:textSize="@dimen/_14sdp"
+            android:text="@string/english"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:gravity="center_vertical"
+            android:textColorHint="@color/Grey60"
+            android:fontFamily="@font/kumbh_sans_regular"
+            />
+        <ImageView
+            android:id="@+id/iv_english"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:padding="@dimen/_10sdp"
+            android:src="@drawable/not_selected_radio"
+            android:layout_marginEnd="@dimen/_5sdp"/>
+
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_20sdp"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginHorizontal="@dimen/_10sdp"
+        android:paddingHorizontal="@dimen/_10sdp"
+        android:paddingVertical="@dimen/_5sdp"
+        android:id="@+id/ll_second_lang"
+        android:background="@drawable/txt_field_sign_screen">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:background="@color/transparent"
+            android:textSize="@dimen/_14sdp"
+            android:text="ಕನ್ನಡ"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:gravity="center_vertical"
+            android:textColorHint="@color/Grey60"
+            android:fontFamily="@font/kumbh_sans_regular"
+            />
+        <ImageView
+            android:id="@+id/iv_kanad"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:padding="@dimen/_10sdp"
+            android:src="@drawable/selected_radio"
+            android:layout_marginEnd="@dimen/_5sdp"/>
+
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:id="@+id/txt_send_otp_shimmer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:textSize="@dimen/_14sdp"
+            android:fontFamily="@font/kumbh_sans_regular"
+            android:textColor="@color/White20"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            android:paddingHorizontal="@dimen/_10sdp"
+            android:paddingVertical="@dimen/_12sdp"
+            android:gravity="center"
+            android:background="@drawable/btn_forget_password"
+            />
+    </com.facebook.shimmer.ShimmerFrameLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:textSize="@dimen/_14sdp"
+        android:id="@+id/txt_submit"
+        android:fontFamily="@font/kumbh_sans_regular"
+        android:textColor="@color/White20"
+        android:text="@string/submit"
+        android:layout_marginHorizontal="@dimen/_10sdp"
+        android:paddingHorizontal="@dimen/_10sdp"
+        android:paddingVertical="@dimen/_12sdp"
+        android:gravity="center"
+        android:background="@drawable/btn_forget_password"
+        />
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    tools:context=".activity.OtpActivity">
+
+    <include layout="@layout/actionbar_layout_with_icon" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_10sdp" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_10sdp"
+        android:fontFamily="@font/kumbh_sans_bold"
+        android:text="@string/otp_verification"
+        android:textColor="@color/Grey100"
+        android:textSize="@dimen/_20sdp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_10sdp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_10sdp"
+        android:fontFamily="@font/kumbh_sans_medium"
+        android:text="@string/please_type_otp_code_that_we_give_you"
+        android:textColor="@color/Grey80"
+        android:textSize="@dimen/_12sdp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_20sdp"/>
+
+
+<!--    <LinearLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="@dimen/_40sdp"-->
+<!--        android:orientation="horizontal"-->
+<!--        android:layout_marginHorizontal="@dimen/_10sdp"-->
+<!--        android:weightSum="4"-->
+<!--        >-->
+
+<!--        <EditText-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_weight="1"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:background="@drawable/txt_filed_otp_box"-->
+<!--            android:textSize="@dimen/_16sdp"-->
+<!--            android:layout_marginStart="@dimen/_2sdp"-->
+<!--            android:layout_marginEnd="@dimen/_2sdp"-->
+<!--            android:fontFamily="@font/kumbh_sans_regular"-->
+<!--            />-->
+<!--        <EditText-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_weight="1"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:background="@drawable/txt_filed_otp_box"-->
+<!--            android:textSize="@dimen/_16sdp"-->
+<!--            android:layout_marginStart="@dimen/_2sdp"-->
+<!--            android:layout_marginEnd="@dimen/_2sdp"-->
+<!--            android:fontFamily="@font/kumbh_sans_regular"-->
+<!--            />-->
+<!--        <EditText-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_weight="1"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:background="@drawable/txt_filed_otp_box"-->
+<!--            android:textSize="@dimen/_16sdp"-->
+<!--            android:layout_marginStart="@dimen/_2sdp"-->
+<!--            android:layout_marginEnd="@dimen/_2sdp"-->
+<!--            android:fontFamily="@font/kumbh_sans_regular"-->
+<!--            />-->
+
+<!--        <EditText-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_weight="1"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:background="@drawable/txt_filed_otp_box"-->
+<!--            android:textSize="@dimen/_16sdp"-->
+<!--            android:layout_marginStart="@dimen/_2sdp"-->
+<!--            android:layout_marginEnd="@dimen/_2sdp"-->
+<!--            android:fontFamily="@font/kumbh_sans_regular"-->
+<!--            />-->
+<!--    </LinearLayout>-->
+
+    <com.chaos.view.PinView
+        android:state_selected="true"
+        android:id="@+id/firstPinView"
+        style="@style/PinWidget.PinView"
+        app:lineColor="@drawable/pin_bg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:cursorVisible="true"
+        android:inputType="number"
+        android:textColor="@color/Primary100"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:cursorColor="@color/Primary100"
+        app:cursorWidth="1dp"
+        app:itemCount="4"
+        app:itemHeight="@dimen/_50sdp"
+        app:itemRadius="@dimen/_5sdp"
+        app:itemSpacing="@dimen/_12sdp"
+        app:itemWidth="@dimen/_60sdp"
+        app:lineWidth="1dp"
+        android:layout_gravity="center"
+        android:itemBackground="@drawable/simple_edittext"
+        android:gravity="center"
+        app:viewType="rectangle" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_10sdp" />
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginHorizontal="@dimen/_10sdp"
+        android:orientation="horizontal">
+
+        <Chronometer
+            android:id="@+id/tv_timer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:textSize="@dimen/_12sdp"
+            android:layout_marginEnd="@dimen/_2sdp"
+            android:fontFamily="@font/kumbh_sans_regular"
+            android:textColor="@color/Primary100"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/resend_code"
+            android:textSize="@dimen/_12sdp"
+            android:layout_marginEnd="@dimen/_5sdp"
+            android:fontFamily="@font/kumbh_sans_regular"
+            android:textColor="@color/Grey60"/>
+
+        <TextView
+            android:id="@+id/tv_resend_otp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/kumbh_sans_regular"
+            android:text="@string/click_here"
+            android:textColor="@color/Primary100"
+            android:textSize="@dimen/_12sdp" />
+    </LinearLayout>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_20sdp"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:id="@+id/txt_send_otp_shimmer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/_14sdp"
+        android:fontFamily="@font/kumbh_sans_regular"
+        android:textColor="@color/White20"
+        android:layout_marginHorizontal="@dimen/_10sdp"
+        android:paddingHorizontal="@dimen/_10sdp"
+        android:paddingVertical="@dimen/_12sdp"
+        android:gravity="center"
+        android:background="@drawable/btn_forget_password"
+        />
+    </com.facebook.shimmer.ShimmerFrameLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/_14sdp"
+            android:id="@+id/txt_sign_up"
+            android:fontFamily="@font/kumbh_sans_regular"
+            android:textColor="@color/White20"
+            android:text="@string/sign_up"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            android:paddingHorizontal="@dimen/_10sdp"
+            android:paddingVertical="@dimen/_12sdp"
+            android:gravity="center"
+            android:background="@drawable/btn_forget_password"
+            />
+    </RelativeLayout>
+</LinearLayout>

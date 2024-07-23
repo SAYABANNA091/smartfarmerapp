@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.BuySellFragment">
+
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+    android:id="@+id/swipeRefresh"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+         android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_35sdp"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:orientation="horizontal">
+
+
+        <TextView
+            android:id="@+id/tv_user_hello"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:fontFamily="@font/kumbh_sans_bold"
+            android:gravity="center_vertical"
+            android:text="Hello, Mark!"
+            android:textColor="@color/Primary100"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:maxLength="60"
+            android:textSize="@dimen/_20sdp" />
+
+        <ImageView
+            android:id="@+id/iv_fav_icon"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_alignParentRight="true"
+            android:padding="10dp"
+            android:src="@drawable/fav_icon"
+            android:visibility="visible"/>
+        <ImageView
+            android:id="@+id/iv_right"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_alignParentRight="true"
+            android:padding="5dp"
+            android:src="@drawable/notification"
+            android:visibility="gone"/>
+
+
+    </LinearLayout>
+
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabLayout_buy_sell"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:tabIndicatorColor="@color/Primary100"
+        app:tabSelectedTextColor="@color/Primary100"
+        app:tabTextAppearance="@style/CustomTextAppearanceTab"
+        app:tabTextColor="@color/Grey60">
+
+    </com.google.android.material.tabs.TabLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_35sdp"
+        android:layout_marginVertical="@dimen/_10sdp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/ll_search"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            android:layout_weight="1"
+            android:background="@drawable/txt_field_sign_screen"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingHorizontal="@dimen/_5sdp"
+            android:paddingVertical="@dimen/_5sdp">
+
+            <ImageView
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="@dimen/_5sdp"
+                android:padding="@dimen/_3sdp"
+                android:src="@drawable/search_icon" />
+
+            <EditText
+                android:id="@+id/et_search"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/transparent"
+                android:fontFamily="@font/kumbh_sans_regular"
+                android:hint="@string/sell_hint"
+                android:imeOptions="actionSearch"
+                android:inputType="textPersonName"
+                android:maxLines="1"
+                android:textColorHint="@color/Grey60"
+                android:textSize="@dimen/_12sdp" />
+
+            <ImageView
+                android:id="@+id/iv_clear_search"
+                android:layout_width="@dimen/_30sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_marginEnd="@dimen/_5sdp"
+                android:padding="@dimen/_2sdp"
+                android:src="@drawable/remove_image_icon"
+                app:tint="@color/Primary100" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/iv_add_product"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/_minus3sdp"
+            android:layout_marginEnd="@dimen/_7sdp"
+            android:padding="@dimen/_1sdp"
+            android:visibility="gone"
+            android:src="@drawable/add_icon" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_5sdp" />
+
+    <!--BUY  Tab -->
+    <LinearLayout
+        android:id="@+id/ll_buy_tab_items"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="gone">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="@string/recently_added"
+                android:textColor="@color/Grey100"
+                android:textSize="@dimen/_12sdp"
+                android:fontFamily="@font/kumbh_sans_medium"
+                android:gravity="start|center_vertical"/>
+            <TextView
+                android:id="@+id/tv_see_all"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.25"
+                android:text="@string/see_all"
+                android:textColor="@color/Grey60"
+                android:textSize="@dimen/_10sdp"
+                android:fontFamily="@font/kumbh_sans_regular"
+                android:gravity="end|center_vertical"/>
+
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_types"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="@dimen/_7sdp"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+            <com.facebook.shimmer.ShimmerFrameLayout
+                android:id="@+id/sf_buy_shimmer"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+               >
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_buy_itemsShimmer"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+
+                    />
+            </com.facebook.shimmer.ShimmerFrameLayout>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_buy_items"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                />
+            <LinearLayout
+                android:id="@+id/ll_buy_empty_search"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.5" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_170sdp"
+                    android:src="@drawable/emptysearch_icon" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_minus25sdp"
+                    android:fontFamily="@font/kumbh_sans_regular"
+                    android:gravity="center"
+                    android:text="@string/no_products_found"
+                    android:textColor="@color/Grey60"
+                    android:textSize="@dimen/_12sdp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1.25" />
+            </LinearLayout>
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <!--Sell  Tab -->
+
+    <LinearLayout
+        android:id="@+id/ll_sell_tab_items"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="gone">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="@string/recently_added"
+                android:textColor="@color/Grey100"
+                android:textSize="@dimen/_12sdp"
+                android:fontFamily="@font/kumbh_sans_medium"
+                android:gravity="start|center_vertical"/>
+            <TextView
+                android:id="@+id/tv_sell_see_all"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.25"
+                android:text="@string/see_all"
+                android:textColor="@color/Grey60"
+                android:textSize="@dimen/_10sdp"
+                android:fontFamily="@font/kumbh_sans_regular"
+                android:gravity="end|center_vertical"/>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <com.facebook.shimmer.ShimmerFrameLayout
+                android:id="@+id/sf_sell_shimmer"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_sell_items_shimmer"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    tools:itemCount="4"
+                    tools:listitem="@layout/layout_buy_sell_item_list_adapter_shimmer"
+                    />
+            </com.facebook.shimmer.ShimmerFrameLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_sell_items"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <LinearLayout
+                android:id="@+id/ll_sell_empty_search"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.5" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_170sdp"
+                    android:src="@drawable/emptysearch_icon" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_minus25sdp"
+                    android:fontFamily="@font/kumbh_sans_regular"
+                    android:gravity="center"
+                    android:text="@string/no_products_found"
+                    android:textColor="@color/Grey60"
+                    android:textSize="@dimen/_12sdp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1.25" />
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <!--Empty Search    -->
+    </LinearLayout>
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    <com.soni.utils.fab.MovableFloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom|end"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:backgroundTint="@color/Primary100"
+        android:foreground="@drawable/add_round" />
+
+</RelativeLayout>

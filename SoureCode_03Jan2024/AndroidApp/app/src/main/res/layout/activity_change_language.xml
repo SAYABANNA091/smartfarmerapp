@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.ChangeLanguageActivity">
+
+
+    <include layout="@layout/actionbar_layout_with_title"/>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_20sdp"/>
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/ll_english"
+        android:layout_marginHorizontal="@dimen/_10sdp"
+        android:paddingHorizontal="@dimen/_10sdp"
+        android:paddingVertical="@dimen/_5sdp"
+        android:background="@drawable/txt_field_sign_screen">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:background="@color/transparent"
+            android:textSize="@dimen/_16sdp"
+            android:text="@string/english"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:gravity="center_vertical"
+            android:textColorHint="@color/Grey60"
+            android:fontFamily="@font/kumbh_sans_regular"
+            />
+        <ImageView
+            android:id="@+id/iv_english"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:padding="@dimen/_12sdp"
+            android:src="@drawable/not_selected_radio"
+            />
+
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_10sdp"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginHorizontal="@dimen/_10sdp"
+        android:paddingHorizontal="@dimen/_10sdp"
+        android:paddingVertical="@dimen/_5sdp"
+        android:id="@+id/ll_second_lang"
+        android:background="@drawable/txt_field_sign_screen">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:background="@color/transparent"
+            android:textSize="@dimen/_16sdp"
+            android:text="ಕನ್ನಡ"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:gravity="center_vertical"
+            android:textColorHint="@color/Grey60"
+            android:fontFamily="@font/kumbh_sans_regular"
+            />
+        <ImageView
+            android:id="@+id/iv_kanad"
+
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:padding="@dimen/_12sdp"
+            android:src="@drawable/selected_radio"
+            />
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

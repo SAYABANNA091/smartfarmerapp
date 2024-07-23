@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#000000</color>
+    <color name="Grey20">#F0F3F6</color>
+    <color name="Grey40">#D1D5DB</color>
+    <color name="Grey60">#ADB3BC</color>
+    <color name="Grey80">#50555C</color>
+    <color name="Grey100">#2B2122</color>
+    <color name="White20">#F9FAFA</color>
+    <color name="White40">#FFFFFFFF</color>
+    <color name="Primary100">#574244</color>
+    <color name="Primary33">#332821</color>
+    <color name="Primary200">#F9F1F1</color>
+    <color name="AccentRed">#F03345</color>
+    <color name="PrimaryRed">#D30217</color>
+    <color name="AccentGreen">#42F033</color>
+    <color name="PrimaryGreen">#0EAE00</color>
+    <color name="AccentYellow">#F0C633</color>
+    <color name="light_blue_600">#FF039BE5</color>
+    <color name="light_blue_900">#FF01579B</color>
+    <color name="light_blue_A200">#FF40C4FF</color>
+    <color name="light_blue_A400">#FF00B0FF</color>
+    <color name="humidity">#322FE7</color>
+    <color name="humidity_alpha">#1A322FE7</color>
+    <color name="feel_temp">#D86191</color>
+    <color name="feel_temp_alpha">#1AD86191</color>
+    <color name="wind">#EAB54E</color>
+    <color name="wind_alpha">#1AEAB54E</color>
+    <color name="rainfall">#658ED9</color>
+    <color name="rainfall_alpha">#1A658ED9</color>
+
+    <color name="black_overlay">#66000000</color>
+
+    <color name="transparent">#00000000</color>
+    <color name="White80">#F9FAFA</color>
+    <color name="White100">#FFFFFFFF</color>
+
+
+
+</resources>

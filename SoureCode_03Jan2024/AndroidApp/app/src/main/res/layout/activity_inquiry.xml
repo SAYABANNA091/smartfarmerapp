@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.InquiryActivity">
+
+
+    <include layout="@layout/actionbar_layout_with_title" />
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipe_refresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tabLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:tabIndicatorColor="@color/Primary100"
+                app:tabSelectedTextColor="@color/Primary100"
+                app:tabTextColor="@color/Grey60"
+                app:tabTextAppearance="@style/CustomTextAppearanceTab"
+                 />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginHorizontal="@dimen/_3sdp"
+                android:layout_weight="1">
+                <RelativeLayout
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent"
+                    android:id="@+id/rl_inquiry">
+                <com.facebook.shimmer.ShimmerFrameLayout
+                    android:id="@+id/sf_shimmer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rv_inquiries_Shimmer"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+
+                        />
+                </com.facebook.shimmer.ShimmerFrameLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_inquiries"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+                </RelativeLayout>
+            <RelativeLayout
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:id="@+id/rl_inquiry_products"
+                android:visibility="gone">
+                <com.facebook.shimmer.ShimmerFrameLayout
+                    android:id="@+id/sf_shimmer_products"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rv_inquiries_products_shimmer"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+
+                        />
+                </com.facebook.shimmer.ShimmerFrameLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_inquiries_porducts"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+            </RelativeLayout>
+                <TextView
+                    android:visibility="gone"
+                    android:id="@+id/tv_no_inq"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:fontFamily="@font/kumbh_sans_regular"
+                    android:gravity="center"
+                    android:text="@string/you_have_not_received_any_inquiries_yet"
+                    android:textColor="@color/Grey60"
+                    android:textSize="@dimen/_12ssp" />
+            </RelativeLayout>
+        </LinearLayout>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+</LinearLayout>

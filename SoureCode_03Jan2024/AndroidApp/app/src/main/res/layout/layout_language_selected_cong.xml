@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_gravity="center"
+    android:gravity="center"
+    android:background="@color/transparent"
+    android:layout_height="match_parent"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:background="@drawable/dialog_back"
+        android:orientation="vertical">
+
+
+    <ImageView
+        android:layout_width="@dimen/_170sdp"
+        android:layout_height="@dimen/_140sdp"
+        android:layout_gravity="center"
+        android:src="@drawable/icon_for_langu_selected"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/kumbh_sans_bold"
+            android:text="@string/setup_completed"
+            android:textColor="@color/Grey100"
+
+            android:textSize="@dimen/_18sdp" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_10sdp"
+        android:fontFamily="@font/kumbh_sans_bold"
+        android:text="@string/congratulations"
+        android:textColor="@color/Grey100"
+        android:gravity="center"
+        android:textSize="@dimen/_14sdp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_10sdp"
+        android:fontFamily="@font/kumbh_sans_bold"
+        android:text="@string/you_are_all_set_up"
+        android:gravity="center"
+        android:textColor="@color/Grey100"
+        android:textSize="@dimen/_14sdp" />
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_20sdp" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/_14sdp"
+            android:id="@+id/txt_ok"
+            android:fontFamily="@font/kumbh_sans_regular"
+            android:textColor="@color/White20"
+            android:text="@string/ok"
+            android:layout_marginHorizontal="@dimen/_30sdp"
+            android:paddingHorizontal="@dimen/_10sdp"
+            android:paddingVertical="@dimen/_12sdp"
+            android:gravity="center"
+            android:background="@drawable/btn_forget_password"
+
+            />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_20sdp" />
+
+    </LinearLayout>
+</LinearLayout>
